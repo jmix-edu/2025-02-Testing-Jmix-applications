@@ -23,7 +23,7 @@ public class TaskService {
                 .addProperty("user")
                 .addProperty("efforts"));
 
-        User leastBusy = keyValueEntities.get(0).getValue("user");
+        User leastBusy = keyValueEntities.getFirst().getValue("user");
         if (leastBusy == null) {
             throw new IllegalStateException();
         }
